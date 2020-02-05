@@ -1,0 +1,25 @@
+{% set arr = range(0, 10) %}
+{% set count = 3 %}
+
+<p>arr: {{ arr | dump }}</p>
+{# expected: [0,1,2,3,4,5,6,7,8,9] #}
+
+<p>arr | batch({{ count }}): {{ arr | batch(count) | dump }}</p>
+{# expected: [[0,1,2], [3,4,5], [6,7,8], [9]] #}
+
+<p>arr | batch({{ count }}) | first: {{ arr | batch(count) | first | dump }}</p>
+{# expected: [0,1,2] #}
+
+<hr/>
+
+<p>arr | limit: {{ arr | limit | dump }}</p>
+{# expected: [0,1,2,3,4,5,6,7,8,9] #}
+
+<p>arr | limit({{ count }}): {{ arr | limit(count) | dump }}</p>
+{# expected: [0,1,2] #}
+
+<p>arr | limit(-{{ count }}): {{ arr | limit(-count) | dump }}</p>
+{# expected: [7,8,9] #}
+
+<p>arr | reverse | limit({{ count }}): {{ arr | reverse | limit(count) | dump }}</p>
+{# expected: [9,8,7] #}
