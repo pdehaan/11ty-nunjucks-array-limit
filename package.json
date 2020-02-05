@@ -1,15 +1,25 @@
 {
   "name": "11ty-nunjucks-array-limit",
+  "description": "Slicing up an array using Nunjucks filters.",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
-  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-nunjucks-array-limit/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"
+  },
+  "homepage": "https://github.com/pdehaan/11ty-nunjucks-array-limit#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-nunjucks-array-limit.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
